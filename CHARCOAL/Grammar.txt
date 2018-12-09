@@ -1,0 +1,32 @@
+<program> -> <access_mod> <class> <iden> <stmt_list>
+<declaration> -> <access_mod> <datatype> <iden>
+<declaration> -> <access_mod> <datatype> <iden> <assignment>
+<assignment> -> <assign> <expr>
+<if_stmnt> -> <if> <condition> <stmnt_list> <end>
+<while_stmnt> -> <until> <condition> <stmt_list> <end>
+<input> -> <datatype> <iden> <assign> <scanner>
+<output> -> <print> <expr>
+<stmt_list> -> <stmt> <stmt_list'>
+<stmt_list'> -> <stmt> <stmt_list'>
+<stmt_list'> -> EPSILON
+<stmt> -> <assignment>
+<stmt> -> <declaration>
+<stmt> -> <input>
+<stmt> -> <output>
+<stmt> -> <if_stmnt>
+<stmt> -> <while_stmnt>
+<condition> -> <term> <log_operator> <condition>  
+<condition> -> <term> <rel_operator> <condition> 
+<condition> -> <term>
+<math_expr> -> <term> <operator> <math_expr>
+<math_expr> -> <term>
+<expr> -> <quot_string> <term> <expr> <quot_string>
+<expr> -> <term> <expr> 
+<expr> -> <quot_char> <term> <quot_char> 
+<expr> -> <number> 
+<expr> -> <bool_val> 
+<expr> -> <math_expr> 
+<expr> -> <rel_expr> 
+<expr> -> <term>
+<term> -> <iden> 
+<term> -> <number>

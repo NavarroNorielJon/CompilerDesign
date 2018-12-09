@@ -1,0 +1,14 @@
+<program>	$
+<declaration>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<assignment>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<if_stmnt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<while_stmnt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<input>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<output>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<stmt_list>	<end>, $
+<stmt_list'>	<end>, $
+<stmt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<condition>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <stmnt_list>
+<math_expr>	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<expr>	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+<term>	<quot_string>, <quot_char>, <number>, <bool_val>, <rel_expr>, <iden>, <operator>, <log_operator>, <rel_operator>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <stmnt_list>, <end>, $
