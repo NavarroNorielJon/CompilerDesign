@@ -1,0 +1,34 @@
+1	<program> → <access_mod> <class> <iden> <stmt_list>	<access_mod>
+2	<declaration> → <access_mod> <datatype> <iden>	<access_mod>
+3	<declaration> → <access_mod> <datatype> <iden> <assignment>	<access_mod>
+4	<assignment> → <assign> <expr>	<assign>
+5	<if_stmnt> → <if> <condition> <stmnt_list>	<if>
+6	<while_stmnt> → <until> <condition> <stmt_list> <end>	<until>
+7	<input> → <datatype> <iden> <assign> <scanner>	<datatype>
+8	<output> → <print> <expr>	<print>
+9	<stmt_list> → <stmt> <stmt_list'>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
+10	<stmt_list'> → <stmt> <stmt_list'>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
+11	<stmt_list'> → ε	<end>, $
+12	<stmt> → <assignment>	<assign>
+13	<stmt> → <declaration>	<access_mod>
+14	<stmt> → <input>	<datatype>
+15	<stmt> → <output>	<print>
+16	<stmt> → <if_stmnt>	<if>
+17	<stmt> → <while_stmnt>	<until>
+18	<condition> → <term> <condition'>	<iden>, <number>
+19	<condition'> → <log_operator> <term> <condition'>	<log_operator>
+20	<condition'> → <rel_operator> <term> <condition’>	<rel_operator>
+21	<condition'> → ε	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <stmnt_list>
+22	<math_expr> → <term> <math_expr'>	<iden>, <number>
+23	<math_expr'> → <operator> <term> <math_expr’>	<operator>
+24	<math_expr’> → ε	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
+25	<expr> → <quot_string> <term> <expr> <quot_string>	<quot_string>
+26	<expr> → <term> <expr>	<iden>, <number>
+27	<expr> → <quot_char> <term> <quot_char>	<quot_char>
+28	<expr> → <number>	<number>
+29	<expr> → <bool_val>	<bool_val>
+30	<expr> → <math_expr>	<iden>, <number>
+31	<expr> → <rel_expr>	<rel_expr>
+32	<expr> → <term>	<iden>, <number>
+33	<term> → <iden>	<iden>
+34	<term> → <number>	<number>

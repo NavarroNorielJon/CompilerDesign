@@ -1,0 +1,38 @@
+<access_mod>	<access_mod>
+<class>	<class>
+<iden>	<iden>
+<datatype>	<datatype>
+<assign>	<assign>
+<if>	<if>
+<stmnt_list>	<stmnt_list>
+<until>	<until>
+<end>	<end>
+<scanner>	<scanner>
+<print>	<print>
+ε	ε
+<log_operator>	<log_operator>
+<rel_operator>	<rel_operator>
+<condition’>	<condition’>
+<operator>	<operator>
+<quot_string>	<quot_string>
+<quot_char>	<quot_char>
+<number>	<number>
+<bool_val>	<bool_val>
+<rel_expr>	<rel_expr>
+<program>	<access_mod>
+<declaration>	<access_mod>
+<assignment>	<assign>
+<if_stmnt>	<if>
+<while_stmnt>	<until>
+<input>	<datatype>
+<output>	<print>
+<stmt_list'>	ε, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>
+<condition'>	<log_operator>, <rel_operator>, ε
+<math_expr'>	<operator>
+<math_expr’>	ε
+<expr>	<quot_string>, <quot_char>, <number>, <bool_val>, <rel_expr>, <iden>
+<term>	<iden>, <number>
+<stmt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
+<condition>	<iden>, <number>
+<math_expr>	<iden>, <number>
+<stmt_list>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
