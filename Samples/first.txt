@@ -1,38 +1,40 @@
-<access_mod>	<access_mod>
+<access_modifier>	<access_modifier>
 <class>	<class>
-<iden>	<iden>
-<datatype>	<datatype>
-<assign>	<assign>
-<if>	<if>
-<stmnt_list>	<stmnt_list>
-<until>	<until>
+<program_name>	<program_name>
+<end_program>	<end_program>
+ε	ε
 <end>	<end>
+<end_if>	<end_if>
+<end_while>	<end_while>
+<data_type>	<data_type>
+<identifier>	<identifier>
 <scanner>	<scanner>
 <print>	<print>
-ε	ε
-<log_operator>	<log_operator>
-<rel_operator>	<rel_operator>
-<condition’>	<condition’>
-<operator>	<operator>
-<quot_string>	<quot_string>
-<quot_char>	<quot_char>
+<if>	<if>
+<until>	<until>
+<logical_operator>	<logical_operator>
+<relational_operator>	<relational_operator>
+<assign>	<assign>
+<string>	<string>
 <number>	<number>
-<bool_val>	<bool_val>
-<rel_expr>	<rel_expr>
-<program>	<access_mod>
-<declaration>	<access_mod>
-<assignment>	<assign>
-<if_stmnt>	<if>
-<while_stmnt>	<until>
-<input>	<datatype>
+<character>	<character>
+<boolean_value>	<boolean_value>
+<operator>	<operator>
+<program>	<access_modifier>
+<statement_list'>	ε, <access_modifier>, <print>, <until>, <data_type>, <if>, <identifier>, <string>, <number>, <character>, <boolean_value>
+<declaration>	<access_modifier>
+<input>	<data_type>
 <output>	<print>
-<stmt_list'>	ε, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>
-<condition'>	<log_operator>, <rel_operator>, ε
-<math_expr'>	<operator>
-<math_expr’>	ε
-<expr>	<quot_string>, <quot_char>, <number>, <bool_val>, <rel_expr>, <iden>
-<term>	<iden>, <number>
-<stmt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
-<condition>	<iden>, <number>
-<math_expr>	<iden>, <number>
-<stmt_list>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
+<if_statement>	<if>
+<while_statement>	<until>
+<condition'>	<relational_operator>
+condition'>	ε
+<assignment>	<assign>
+<term>	<identifier>, <string>, <number>, <character>, <boolean_value>
+<constant>	<string>, <number>, <character>, <boolean_value>
+<statement>	<access_modifier>, <print>, <until>, <data_type>, <if>, <identifier>, <string>, <number>, <character>, <boolean_value>
+<condition>	<identifier>, <string>, <number>, <character>, <boolean_value>
+<math_expression>	<identifier>, <string>, <number>, <character>, <boolean_value>
+<expression>	<identifier>, <string>, <number>, <character>, <boolean_value>
+<relational_expression>	<identifier>, <string>, <number>, <character>, <boolean_value>
+<statement_list>	<access_modifier>, <print>, <until>, <data_type>, <if>, <identifier>, <string>, <number>, <character>, <boolean_value>

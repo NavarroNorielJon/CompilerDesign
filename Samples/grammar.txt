@@ -1,34 +1,29 @@
-<program> -> <access_mod> <class> <iden> <stmt_list>
-<declaration> -> <access_mod> <datatype> <iden> 
-<declaration> -> <access_mod> <datatype> <iden> <assignment>
-<assignment> -> <assign> <expr>
-<if_stmnt> -> <if> <condition> <stmnt_list>
-<while_stmnt> -> <until> <condition> <stmt_list> <end>
-<input> -> <datatype> <iden> <assign> <scanner>
-<output> -> <print> <expr>
-<stmt_list> -> <stmt> <stmt_list'>
-<stmt_list'> -> <stmt> <stmt_list'>
-<stmt_list'> -> EPSILON
-<stmt> -> <assignment> 
-<stmt> -> <declaration> 
-<stmt> -> <input> 
-<stmt> -> <output> 
-<stmt> -> <if_stmnt> 
-<stmt> -> <while_stmnt>
-<condition> -> <term> <condition'>
-<condition'> -> <log_operator> <term> <condition'>
-<condition'> -> <rel_operator> <term> <condition’>
-<condition'> -> EPSILON 
-<math_expr> -> <term> <math_expr'>
-<math_expr'> -> <operator> <term> <math_expr’>
-<math_expr’> -> EPSILON
-<expr> -> <quot_string> <term> <expr> <quot_string> 
-<expr> -> <term> <expr> 
-<expr> -> <quot_char> <term> <quot_char> 
-<expr> -> <number> 
-<expr> -> <bool_val> 
-<expr> -> <math_expr> 
-<expr> -> <rel_expr> 
-<expr> -> <term>
-<term> -> <iden> 
-<term> -> <number>
+<program> -> <access_modifier> <class> <program_name> <statement_list> <end_program>
+<statement_list> -> <statement> <statement_list'>
+<statement_list'> -> <statement> <statement_list'>
+<statement_list'> -> EPSILON
+<statement> -> <declaration> <end>
+<statement> -> <input> <end>
+<statement> -> <output> <end>
+<statement> -> <if_statement> <end_of>
+<statement> -> <while_statement> <end_while>
+<statement> -> <expression> <end>
+<declaration> -> <access_modifier> <data_type> <identifier>
+<input> -> <data_type> <identifier> <scanner>
+<output> -> <print> <term>
+<if_statement> -> <if> <condition> <statement_list>
+<while_statement> -> <until> <condition> <statement_list>
+<condition> -> <term> <logical_operator> <term> <condition'>
+<condition'> -> <relational_operator> <condition>
+condition'> -> EPSILON
+<assignment> -> <assign> <term>
+<term> -> <identifier>
+<term> -> <constant>
+<constant> -> <string>
+<constant> -> <number>
+<constant> -> <character>
+<constant> -> <boolean_value>
+<expression> -> <math_expression>
+<expression> -> <relational_expression>
+<math_expression> -> <term> <operator> <term>
+<relational_expression> -> <condition> <relational_expression> <condition>

@@ -1,17 +1,18 @@
 <program>	$
-<declaration>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<assignment>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<if_stmnt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<while_stmnt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<input>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<output>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<stmt_list>	<end>, $
-<stmt_list'>	<end>, $
-<stmt>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<condition>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <stmnt_list>
-<condition'>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <stmnt_list>
-<math_expr>	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<math_expr'>	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<math_expr’>	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<expr>	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-<term>	<quot_string>, <quot_char>, <number>, <bool_val>, <rel_expr>, <iden>, <operator>, <log_operator>, <rel_operator>, <condition’>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <stmnt_list>, <end>, $
+<statement_list>	<end_program>, <end_while>, <end_if>
+<statement_list'>	<end_program>, <end_while>, <end_if>
+<statement>	<access_modifier>, <print>, <until>, <data_type>, <if>, <identifier>, <string>, <number>, <character>, <boolean_value>, <end_program>, <end_while>, <end_if>
+<declaration>	<end>
+<input>	<end>
+<output>	<end>
+<if_statement>	<end_if>
+<while_statement>	<end_while>
+<condition>	<identifier>, <string>, <number>, <character>, <boolean_value>, <access_modifier>, <print>, <until>, <data_type>, <if>, <end>
+<condition'>	<identifier>, <string>, <number>, <character>, <boolean_value>, <access_modifier>, <print>, <until>, <data_type>, <if>, <end>
+condition'>
+<assignment>
+<term>	<operator>, <logical_operator>, <relational_operator>, <end>
+<constant>	<operator>, <logical_operator>, <relational_operator>, <end>
+<expression>	<end>
+<math_expression>	<end>
+<relational_expression>	<identifier>, <string>, <number>, <character>, <boolean_value>, <end>

@@ -1,6 +1,15 @@
-public class sample
-  until x < 10
-    if x % 2 == 0
-      print "Hello, World"
-    end
-  end
+public class CompilerDesign
+    public integer sampleInt.
+    string keyboard scanner.
+
+    print "Printing a sample string".
+    sampleInt is 10.
+
+    if sampleInt == 10
+        print "Hello World "
+    end if
+
+    until sampleInt >= 0
+        sampleInt - 1.
+    end while
+end program

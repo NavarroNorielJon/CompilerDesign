@@ -1,34 +1,29 @@
-1	<program> → <access_mod> <class> <iden> <stmt_list>	<access_mod>
-2	<declaration> → <access_mod> <datatype> <iden>	<access_mod>
-3	<declaration> → <access_mod> <datatype> <iden> <assignment>	<access_mod>
-4	<assignment> → <assign> <expr>	<assign>
-5	<if_stmnt> → <if> <condition> <stmnt_list>	<if>
-6	<while_stmnt> → <until> <condition> <stmt_list> <end>	<until>
-7	<input> → <datatype> <iden> <assign> <scanner>	<datatype>
-8	<output> → <print> <expr>	<print>
-9	<stmt_list> → <stmt> <stmt_list'>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
-10	<stmt_list'> → <stmt> <stmt_list'>	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>
-11	<stmt_list'> → ε	<end>, $
-12	<stmt> → <assignment>	<assign>
-13	<stmt> → <declaration>	<access_mod>
-14	<stmt> → <input>	<datatype>
-15	<stmt> → <output>	<print>
-16	<stmt> → <if_stmnt>	<if>
-17	<stmt> → <while_stmnt>	<until>
-18	<condition> → <term> <condition'>	<iden>, <number>
-19	<condition'> → <log_operator> <term> <condition'>	<log_operator>
-20	<condition'> → <rel_operator> <term> <condition’>	<rel_operator>
-21	<condition'> → ε	<assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <stmnt_list>
-22	<math_expr> → <term> <math_expr'>	<iden>, <number>
-23	<math_expr'> → <operator> <term> <math_expr’>	<operator>
-24	<math_expr’> → ε	<quot_string>, <assign>, <datatype>, <if>, <access_mod>, <until>, <print>, <end>, $
-25	<expr> → <quot_string> <term> <expr> <quot_string>	<quot_string>
-26	<expr> → <term> <expr>	<iden>, <number>
-27	<expr> → <quot_char> <term> <quot_char>	<quot_char>
-28	<expr> → <number>	<number>
-29	<expr> → <bool_val>	<bool_val>
-30	<expr> → <math_expr>	<iden>, <number>
-31	<expr> → <rel_expr>	<rel_expr>
-32	<expr> → <term>	<iden>, <number>
-33	<term> → <iden>	<iden>
-34	<term> → <number>	<number>
+1	<program> → <access_modifier> <class> <program_name> <statement_list> <end_program>	<access_modifier>
+2	<statement_list> → <statement> <statement_list'>	<access_modifier>, <print>, <until>, <data_type>, <if>, <identifier>, <string>, <number>, <character>, <boolean_value>
+3	<statement_list'> → <statement> <statement_list'>	<access_modifier>, <print>, <until>, <data_type>, <if>, <identifier>, <string>, <number>, <character>, <boolean_value>
+4	<statement_list'> → ε	<end_program>, <end_while>, <end_if>
+5	<statement> → <declaration> <end>	<access_modifier>
+6	<statement> → <input> <end>	<data_type>
+7	<statement> → <output> <end>	<print>
+8	<statement> → <if_statement> <end_if>	<if>
+9	<statement> → <while_statement> <end_while>	<until>
+10	<statement> → <expression> <end>	<identifier>, <string>, <number>, <character>, <boolean_value>
+11	<declaration> → <access_modifier> <data_type> <identifier>	<access_modifier>
+12	<input> → <data_type> <identifier> <scanner>	<data_type>
+13	<output> → <print> <term>	<print>
+14	<if_statement> → <if> <condition> <statement_list>	<if>
+15	<while_statement> → <until> <condition> <statement_list>	<until>
+16	<condition> → <term> <logical_operator> <term> <condition'>	<identifier>, <string>, <number>, <character>, <boolean_value>
+17	<condition'> → <relational_operator> <condition>	<relational_operator>
+18	condition'> → ε
+19	<assignment> → <assign> <term>	<assign>
+20	<term> → <identifier>	<identifier>
+21	<term> → <constant>	<string>, <number>, <character>, <boolean_value>
+22	<constant> → <string>	<string>
+23	<constant> → <number>	<number>
+24	<constant> → <character>	<character>
+25	<constant> → <boolean_value>	<boolean_value>
+26	<expression> → <math_expression>	<identifier>, <string>, <number>, <character>, <boolean_value>
+27	<expression> → <relational_expression>	<identifier>, <string>, <number>, <character>, <boolean_value>
+28	<math_expression> → <term> <operator> <term>	<identifier>, <string>, <number>, <character>, <boolean_value>
+29	<relational_expression> → <condition> <relational_expression> <condition>	<identifier>, <string>, <number>, <character>, <boolean_value>
